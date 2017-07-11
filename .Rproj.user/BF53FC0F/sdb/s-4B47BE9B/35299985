@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @title Dibuja el histograma de una variable superponiendo la densidad normal ajustada\n#' @description Función que dibuja el histograma de una variable x, superponiendo la densidad normal\n#' ajustada. Si el usuario lo desea puede superponer también un estimador de núcleo de la densidad.\n#' @param x vector de datos cuyo histograma se va a calcular\n#' @param dens valor lógico: TRUE=Superponer estimador de núcleo de la densidad\n#' @return el histograma con la densidad normal superpuesta\n#' @export normalHist\n#' @examples\n#' u=rnorm(1000,100,12)\n#' normalHist(u);\n#' normalHist(u,dens=TRUE)\n#' normalHist(u,dens=TRUE,col=\"lightcyan\")\n#'\n\ntv <- function(input){\n  #input can either be csv file or data\n  newdata <- if(is.character(input) && file.exists(input)){\n    read.csv(input)\n  } else {\n    as.data.frame(input)\n  }\n  stopifnot(\"age\" %in% names(newdata))\n  stopifnot(\"marital\" %in% names(newdata))\n\n  newdata$age <- as.numeric(newdata$age)\n\n  #tv_model is included with the package\n  newdata$tv <- predict.gam(tv_model, newdata = newdata)\n  return(newdata)\n}\n",
+    "created" : 1499123876881.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3909764202",
+    "id" : "35299985",
+    "lastKnownWriteTime" : 1499124129,
+    "last_content_update" : 1499124129357,
+    "path" : "~/tvscore/R/tv.R",
+    "project_path" : "R/tv.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Hello, world!\n#\n# This is an example function named 'hello'\n# which prints 'Hello, world!'.\n#\n# You can learn more about package authoring with RStudio at:\n#\n#   http://r-pkgs.had.co.nz/\n#\n# Some useful keyboard shortcuts for package authoring:\n#\n#   Build and Reload Package:  'Ctrl + Shift + B'\n#   Check Package:             'Ctrl + Shift + E'\n#   Test Package:              'Ctrl + Shift + T'\n\nhello <- function() {\n  print(\"Hello, world!\")\n}\n\ndownload.file(\"http://gss.norc.org/Documents/spss/2012_spss.zip\", destfile=\"2012_spss.zip\")\nunzip(\"2012_spss.zip\")\nGSS <- foreign::read.spss(\"GSS2012.sav\", to.data.frame=TRUE)\n\nlibrary(mgcv)\nmydata <- na.omit(GSS[c(\"age\", \"tvhours\", \"marital\")])\ntv_model <- gam(tvhours ~ s(age, by=marital), data = mydata)\n\nsave(tv_model, file=\"data/tv_model.rda\")\n\nnewdata <- data.frame(\n  age = c(24, 54, 32, 75),\n  marital = c(\"MARRIED\", \"DIVORCED\", \"WIDOWED\", \"NEVER MARRIED\")\n)\ntv(input = newdata)\n\n",
+    "created" : 1499122838452.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1855330719",
+    "id" : "453DFD62",
+    "lastKnownWriteTime" : 1499126877,
+    "last_content_update" : 1499126877431,
+    "path" : "~/tvscore/R/hello.R",
+    "project_path" : "R/hello.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
