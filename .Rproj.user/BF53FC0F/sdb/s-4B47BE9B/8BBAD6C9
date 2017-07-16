@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "Package: tvscore\nType: Package\nTitle: Funciones Tablero Estadistico\nVersion: 0.1.0\nAuthor: Rodrigo Martinez\nMaintainer: Rodrigo Developer <ros.go.tru1.2@gmail.com>\nDescription: More about what it does (maybe more than one line)\n    Use four spaces when indenting paragraphs within the Description.\nLicense: GPL (>= 2\nEncoding: UTF-8\nLazyData: true\nRoxygenNote: 6.0.1\n",
+    "contents" : "Package: tvscore\nType: Package\nTitle: Funciones Tablero Estadistico\nVersion: 0.1.0\nAuthor: Rodrigo Martinez\nMaintainer: Rodrigo Developer <ros.go.tru1.2@gmail.com>\nDescription: More about what it does (maybe more than one line)\n    Use four spaces when indenting paragraphs within the Description.\nImports: mgcv\nLicense: GPL (>= 2\nEncoding: UTF-8\nLazyData: true\nRoxygenNote: 6.0.1\n",
     "created" : 1499123519676.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1896037451",
+    "hash" : "626656213",
     "id" : "8BBAD6C9",
-    "lastKnownWriteTime" : 1499125544,
-    "last_content_update" : 1499125544,
+    "lastKnownWriteTime" : 1500246313,
+    "last_content_update" : 1500246314118,
     "path" : "~/tvscore/DESCRIPTION",
     "project_path" : "DESCRIPTION",
     "properties" : {

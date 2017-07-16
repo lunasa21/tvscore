@@ -2,26 +2,23 @@
 % Please edit documentation in R/tv.R
 \name{tv}
 \alias{tv}
-\title{Dibuja el histograma de una variable superponiendo la densidad normal ajustada}
+\title{Funciones de prueba para predicciones}
 \usage{
 tv(input)
 }
 \arguments{
-\item{x}{vector de datos cuyo histograma se va a calcular}
-
-\item{dens}{valor lógico: TRUE=Superponer estimador de núcleo de la densidad}
+\item{input}{vector de datos}
 }
 \value{
-el histograma con la densidad normal superpuesta
+un vectorde datos de prediccion
 }
 \description{
-Función que dibuja el histograma de una variable x, superponiendo la densidad normal
-ajustada. Si el usuario lo desea puede superponer también un estimador de núcleo de la densidad.
+Funcion que predice basadndos een una linea de tiwmpo
 }
 \examples{
-u=rnorm(1000,100,12)
-normalHist(u);
-normalHist(u,dens=TRUE)
-normalHist(u,dens=TRUE,col="lightcyan")
-
+newdata <- data.frame(
+age = c(24, 54, 32, 75),
+marital = c("MARRIED", "DIVORCED", "WIDOWED", "NEVER MARRIED")
+)
+tv(input = newdata)
 }

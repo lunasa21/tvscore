@@ -1,16 +1,16 @@
-#' @title Dibuja el histograma de una variable superponiendo la densidad normal ajustada
-#' @description Función que dibuja el histograma de una variable x, superponiendo la densidad normal
-#' ajustada. Si el usuario lo desea puede superponer también un estimador de núcleo de la densidad.
-#' @param x vector de datos cuyo histograma se va a calcular
-#' @param dens valor lógico: TRUE=Superponer estimador de núcleo de la densidad
-#' @return el histograma con la densidad normal superpuesta
-#' @export normalHist
+#' @title Funciones de prueba para predicciones
+#' @description Funcion que predice basadndos een una linea de tiwmpo
+#' @param input vector de datos
+#' @return un vectorde datos de prediccion
+
 #' @examples
-#' u=rnorm(1000,100,12)
-#' normalHist(u);
-#' normalHist(u,dens=TRUE)
-#' normalHist(u,dens=TRUE,col="lightcyan")
-#'
+#' newdata <- data.frame(
+#' age = c(24, 54, 32, 75),
+#' marital = c("MARRIED", "DIVORCED", "WIDOWED", "NEVER MARRIED")
+#' )
+#' tv(input = newdata)
+#' @export
+#' @import mgcv
 
 tv <- function(input){
   #input can either be csv file or data
